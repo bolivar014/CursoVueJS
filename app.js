@@ -5,7 +5,17 @@ new Vue({
         return {
             name: 'Bitcoin',
             img: 'https://cryptologos.cc/logos/bitcoin-btc-logo.png',
-            changePercent: 0
+            changePercent: -10,
+            prices: [8400, 7900, 2300, 4020, 1000, 3000, 4566],
+            pricesWithDays: [
+                { day: 'Lunes', value: 8400 },
+                { day: 'Martes', value: 7900 },
+                { day: 'Miercoles', value: 2300 },
+                { day: 'Jueves', value: 4020 },
+                { day: 'Viernes', value: 1000 },
+                { day: 'Sabado', value: 3000 },
+                { day: 'Domingo', value: 4566 },
+            ]
         }
     }
 })

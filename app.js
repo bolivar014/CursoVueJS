@@ -7,6 +7,8 @@ new Vue({
             img: 'https://cryptologos.cc/logos/bitcoin-btc-logo.png',
             changePercent: 10,
 
+            color: "f4f4f4",
+
             price: 4020,
 
             prices: [8400, 7900, 2300, 4020, 1000, 3000, 4566],
@@ -21,8 +23,16 @@ new Vue({
             ],
             
             showPrices: true,
-            value: 0
 
+        }
+    },
+
+    methods: {
+        toggleShowPrices () {
+            this.showPrices = !this.showPrices
+            this.color = this.color.split('')
+            .reverse()
+            .join('')
         }
     }
 })

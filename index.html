@@ -16,7 +16,8 @@
             v-bind:alt="name">
 
         <h1 v-bind:class="changePercent > 0 ? 'green' : 'red'">
-            {{ name }}
+            <!--{{ name }} - {{ symbol }}-->
+            {{ title }}
             <span v-if="changePercent > 0">👍</span>
             <span v-else-if="changePercent < 0">👎</span>
             <span v-else>🤞</span>

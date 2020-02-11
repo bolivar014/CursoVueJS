@@ -4,6 +4,7 @@ new Vue({
     data () {
         return {
             name: 'Bitcoin',
+            symbol: 'BTC',
             img: 'https://cryptologos.cc/logos/bitcoin-btc-logo.png',
             changePercent: 10,
 
@@ -27,6 +28,22 @@ new Vue({
         }
     },
 
+    // Propiedades computadas - Permite recuperar parametros e imprimirlos en las vistas
+    computed: {
+        title() {
+            return `${this.name} - ${this.symbol} `
+        }
+    },
+
+    // 
+    watch: {
+        // El esquema es que el nombre de la variable debe ser igual a la función y este recibe dos parametros 1, valor nuevo -> 2, valor Anterior
+        showPrices(newValue, oldValue) {
+            console.log(newValue, oldValue)
+        } 
+    },
+
+    // metodos de la vista
     methods: {
         toggleShowPrices () {
             this.showPrices = !this.showPrices

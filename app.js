@@ -6,7 +6,7 @@ Vue.component('CoinDetail', {
 
     data () {
         return {
-            showPrices: true,
+            showPrices: false,
             value: 0
         }
     },
@@ -14,7 +14,11 @@ Vue.component('CoinDetail', {
     methods: {
         toggleShowPrices () {
             this.showPrices = !this.showPrices
-        }
+    
+            // emite un evento que ejecuta el cambio de color, cada vez que ejecuta este metodo
+            this.$emit('change-color',
+            this.showPrices ? 'FF96C8' : '3D3D3D') 
+        },
     },
 
     computed: {
@@ -112,14 +116,14 @@ new Vue({
     },
 
    
-/*
+
     // metodos de la vista
     methods: {
-        toggleShowPrices () {
-            this.showPrices = !this.showPrices
-            this.color = this.color.split('')
+        updateColor (color) {
+            // sino recibe un color en la variable, muestra el color por defecto
+            this.color = color || this.color.split('')
             .reverse()
             .join('')
         }
-    }*/
+    }
 })

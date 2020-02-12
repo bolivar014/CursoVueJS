@@ -18,7 +18,10 @@
             v-bind:price="price"
             v-bind:convertedValue="convertedValue"
             v-bind:changePercent="changePercent"></coin-detail>-->
-            <coin-detail v-bind:coin="btc" ></coin-detail>
+            <coin-detail 
+                v-on:change-color="updateColor"
+                v-bind:coin="btc" >
+            </coin-detail>
         
         
         <!--<ul>

@@ -1,0 +1,21 @@
+[*] Verificar Estado de git..
+    git status
+    
+    Inicializar repositorio git
+    git init 
+
+    agregar todo el repositorio al git...
+    git add -A 
+
+    Nombre del primer commit
+    git commit -m "Actualización de rutas CategoriasController"
+
+    Ejecutar conexión remota con el repositorio
+    git remote add origin [https://github.com/bolivar014/AppShop.git]
+ 	git remote add origin https://github.com/bolivar014/CursoVueJS_Laravel
+	 
+    Conexión Exitosa
+    git push -f origin master
+
+    Descargar cambios desde el servidor
+    git merge origin/master

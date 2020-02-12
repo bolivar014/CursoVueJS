@@ -38,6 +38,15 @@
             </li>
         </ul>-->
 
+        <input type="number" v-model="value">
+        <!-- 
+            imprimir valor capturado desde el input
+            <span>{{ value }}</span>
+
+        -->
+        <span>{{ convertedValue }}</span>
+
+
         <ul v-show="showPrices">
             <li
                 class="uppercase"
